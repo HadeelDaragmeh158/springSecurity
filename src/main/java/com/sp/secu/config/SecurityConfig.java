@@ -22,8 +22,8 @@ public class SecurityConfig {
                         .requestMatchers("/user-balance").authenticated()
                         .requestMatchers("/user-loans").authenticated()
                         .requestMatchers("/user-cards").authenticated()
-                        .requestMatchers("user-contacts").permitAll()
-                        .requestMatchers("/user-notices").permitAll()
+                        .requestMatchers("/contacts").permitAll()
+                        .requestMatchers("/notices").permitAll()
                         .requestMatchers("/error").permitAll());
         http.formLogin(withDefaults());
         http.httpBasic(withDefaults());
